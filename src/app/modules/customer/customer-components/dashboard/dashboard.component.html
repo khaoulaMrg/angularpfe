@@ -1,0 +1,47 @@
+<div class="parent">
+    <div class="child">
+        <div class="imeDiv">
+            <h2 style="margin-left: auto; margin-right: auto;">Add Category</h2>
+        </div>
+        <form nz-form [formGroup]="categoryForm">
+           
+            <div class="category">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="profile-badge">
+                            <label for="upload_profile_image" class="upload-label" *ngIf="selectedFile">
+                                <img class="profile" [src]="imagePreview"alt="profile" />
+                            </label>
+                            <input type="file" id="upload_profile_image" accept="image/x-png, image/gif, image/jpeg" (change)="onFileSelected($event)" />
+                            <button class="btn btn-primary btn-circle"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Section Upload Profile -->
+            
+            <!-- Section Name -->
+            <div class="category">
+                <div class="row">
+                    <div class="col-12" style="margin-top: 20px;">
+                        <input class="form-control" placeholder="Name" formControlName = "name" />
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Section Name -->
+            
+            <!-- Section Description -->
+            <div class="category">
+                <div class="row">
+                    <div class="col-12">
+                        <textarea rows="1" class="form-control" placeholder="Description" formControlName="description"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Section Description -->
+            
+            <button nz-button class="btn btn-primary login-form-button login-form-margin" 
+            (click)="postCategory()"> Post</button>
+        </form>
+    </div>
+</div>*

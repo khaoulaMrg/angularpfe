@@ -1,0 +1,23 @@
+<!-- Deuxième navbar -->
+<div *ngIf="!showScrapingNavbar">
+
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"></button>
+      <span>Pfe</span>
+      <span class="example-spacer"></span>
+      <div class="nav-links">
+        <a nz-button nzType="link" routerLink="/home" routerLinkActive="active" >Home</a>
+
+        <a nz-button nzType="link" routerLink="/emploi" routerLinkActive="active" >Emploi</a>
+        <a nz-button nzType="link" routerLink="/stage" routerLinkActive="active">Stage</a>
+        <a nz-button nzType="link" routerLink="/demande" routerLinkActive="Active">Publier vos offres</a>
+        <button nz-button nzType="link" routerLink="/login" routerLinkActive="active">Connection
+        </button>
+      </div>
+    </mat-toolbar>
+  </div>
+
+
+  <!-- Content area -->
+ 
+  
